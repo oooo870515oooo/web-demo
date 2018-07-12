@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BearBig</title>
+    <style media="screen">
+      #background{
+          background-color:  #93B3B2;
+          width: 500px;
+          height: 500px;
+          position: relative;
+      }
+      #ear{
+        width:120px;
+        height:120px;
+        border-radius:999em;
+        background-color:#54362E;
+        border-radius: 50%;
+        right: 50%;
+        left: 0;
+        bottom: 55%;
+        top: 0;
+        margin: auto;
+        position: absolute;
+      }
+      #ear2{
+        width:120px;
+        height:120px;
+        border-radius:999em;
+        background-color:#54362E;
+        border-radius: 50%;
+        right: 0;
+        left: 50%;
+        bottom: 55%;
+        top: 0;
+        margin: auto;
+        position: absolute;
+      }
+      #smallear{
+        width:80px;
+        height:80px;
+        border-radius:999em;
+        background-color:#382622;
+        border-radius: 50%;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        position: absolute;
+      }
+      #head{
+        width:400px;
+        height:380px;
+        border-radius:400px/3px;
+        -moz-border-radius: 400px / 400px;
+        -webkit-border-radius: 400px / 380px;
+        background-color:#53382D;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 3%;
+        margin: auto;
+        position: absolute;
+      }
+      #leyes{
+        width:35px;
+        height:35px;
+        border-radius:999em;
+        background-color:black;
+        border-radius: 50%;
+        right: 23%;
+        left: 0;
+        bottom: 13%;
+        top: 0;
+        margin: auto;
+        position: absolute;
+      }
+      #reyes{
+        width:35px;
+        height:35px;
+        border-radius:999em;
+        background-color:black;
+        border-radius: 50%;
+        right: 0;
+        left: 23%;
+        bottom: 13%;
+        top: 0;
+        margin: auto;
+        position: absolute;
+      }
+      #bignose{
+        width:145px;
+        height:145px;
+        border-radius:999em;
+        -moz-border-radius: 100px / 100px;
+        -webkit-border-radius: 100px / 100px;
+        background-color:#F4D0AC;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 40%;
+        margin: auto;
+        position: absolute;
+      }
+      #mouse{
+        width:70px;
+        height:10px;
+        border-radius: 50%/0 0 100% 100% ;
+        background-color:black;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 40%;
+        margin: auto;
+        position: absolute;
+      }
+      #mouse1{
+        width:13px;
+        height:60px;
+        background-color:black;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 5%;
+        margin: auto;
+        position: absolute;
+      }
+      #smallnose{
+        width:40px;
+        height:40px;
+        border-radius: 10%;
+        border-top-right-radius: 100%;
+        transform:rotate(-45deg);
+        background-color:black;
+        right: 0;
+        left: 0;
+        bottom: 50%;
+        top: 0;
+        margin: auto;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="background">
+      <div id="ear">
+        <div id="smallear"></div>
+      </div>
+      <div id="ear2">
+        <div id="smallear"></div>
+      </div>
+      <div id="head">
+        <div id="leyes">
+        </div>
+        <div id="reyes">
+        </div>
+        <div id="bignose">
+          <div id="mouse"></div>
+          <div id="mouse1"></div>
+          <div id="smallnose"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
