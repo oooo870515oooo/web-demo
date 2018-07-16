@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<style media="screen">
+			body{
+ 				margin: auto;
+			}
+			/* 設置一個框把全部包起來 */
+			.container{
+				width: 360px;
+				height: 360px;
+				position: absolute;
+				top:25%;
+				left:25%;
+			}
+
+			/* 包含三種顏色的背景框 */
+      .background{
+				position: absolute;
+        width: 1080px;
+        height: 360px;
+			  transition: all 1s ease;  /*轉型動畫 */
+				transform: translateX(0px); /*X軸變為0*/
+      }
+			/* 依序建立三種顏色 */
+	     .background_1{
+         position: absolute;
+         z-index:1; /*層數(數字越大越上層) */
+         width: 360px;
+         height: 360px;
+         left:0px;
+	       background-color: #031DC2;
+	       }
+	     .background_2{
+	     	 position:absolute;
+         width: 360px;
+         height: 360px;
+	       left:360px;
+         z-index:1;
+	       background-color:#4DB797;
+	     }
+	     .background_3{
+	       position: absolute;
+         width: 360px;
+         height: 360px;
+	       left:720px;
+         z-index:1;
+	       background-color:#C16319;
+	     }
+
+/* --------------------------------------- */
+
+			 /* 分別設置三個圓圈 */
+       .circle_1{
+         width: 32px;
+         height:32px;
+         border-radius:999em;
+         border-color: white;
+				 border-style: solid;/*實線 */
+				 border-width: 1.5px;/* 實線寬 */
+         right: 0;
+         left: 100px;
+         bottom: 0;
+         top:160px;
+				 position: absolute;
+				 z-index:5;
+       }
+			 .circle_2{
+         width: 32px;
+         height:32px;
+         border-radius:999em;
+         border-color: white;
+				 border-style: solid;
+				 border-width: 1.5px;
+         right: 0;
+         left: 160px;
+         bottom: 0;
+         top:160px;
+				 position: absolute;
+				 z-index:5;
+       }
+			 .circle_3{
+         width: 32px;
+         height:32px;
+         border-radius:999em;
+         border-color: white;
+				 border-style: solid;
+				 border-width: 1.5px;
+         right: 0;
+         left: 220px;
+         bottom: 0;
+         top:160px;
+				 position: absolute;
+				 z-index:5;
+       }
+
+			 /* 設置一個遮罩 */
+       .ex2 {
+         width: 360px;
+         height: 360px;
+         overflow: hidden; /* 遮罩 */
+				 position: absolute;
+				 z-index:6;
+       }
+			 /* 在圓圈內會移動的球 */
+			 .input_circle{
+				 width: 27px;
+         height:27px;
+         border-radius:999em;
+         background-color: white;
+         right: 0;
+         left: 104px;
+         bottom: 0;
+         top:164px;
+				 position: absolute;
+				 z-index:5;
+				 transition: all 1s ease; /* 動畫 */
+			 }
+
+			 /* 針對input中的所有radio */
+			 input[type="radio"]{
+				 	display: none; 	/* 隱藏 */
+			 }
+
+			 /* 當名為c1的id被checked時，background類別則會執行 */
+			 #c1:checked~.background{
+				 transform: translateX(0px);/* X軸歸0 */
+				 position: absolute;
+			 }
+			 #c2:checked~.background{
+				 transform: translateX(-360px);/* X軸向左移動360px */
+				 position: absolute;
+			 }
+			 #c3:checked~.background{
+				 transform: translateX(-720px);
+				 position: absolute;
+			 }
+			 #c1:checked~.input_circle{
+				 transform: translateX(0px);
+				 position: absolute;
+			 }
+			 #c2:checked~.input_circle{
+				 transform: translateX(60px);
+				 position: absolute;
+			 }
+			 #c3:checked~.input_circle{
+				 transform: translateX(120px);
+				 position: absolute;
+			 }
+
+
+	</style>
+	<title>Page slide</title>
+</head>
+<body>
+	<div class="container">
+		<div class="ex2">
+			<!-- 先設置按鈕，並且設定type(有3種)，name要一樣才能組成群組有單選，給予一個id(不能重複) -->
+		  <input type="radio" name="group" id="c1">
+		  <input type="radio" name="group" id="c2">
+		  <input type="radio" name="group" id="c3">
+			<!--  設置標籤，標籤連結至某個按鈕，該按鈕套用哪個類別	-->
+			<label  for="c1"  class="circle_1"></label>
+			<label  for="c2"  class="circle_2"></label>
+			<label  for="c3"  class="circle_3"></label>
+		  <div class="input_circle">   </div>
+  		<div class="background">
+    		<div class="background_1"> 	</div>
+    		<div class="background_2">   </div>
+    		<div class="background_3">   </div>
+  		</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
